@@ -267,7 +267,7 @@ class Punish(commands.Cog):
         self.task = bot.loop.create_task(self.on_load())
 
     async def __unload(self):
-        self.task.cancel()
+        await self.task.cancel()
         await self.save_data()
 
     #def save(self):
